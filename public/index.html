@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8 -->
+    <title>Iniciar Sesión</title> <!-- Título de la página -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Enlace al archivo CSS para los estilos -->
+</head>
+<body>
+    <div class="container"> <!-- Contenedor principal de la página -->
+        <img src="img/programador.png" alt="Avatar"> <!-- Imagen del avatar (puede ser un ícono o ilustración) -->
+        <h2>Iniciar Sesión</h2> <!-- Título de la sección -->
+        <form id="loginForm"> <!-- Formulario para iniciar sesión -->
+            <input type="text" id="loginUsername" placeholder="Usuario" required> <!-- Campo para el nombre de usuario -->
+            <input type="password" id="loginPassword" placeholder="Contraseña" required> <!-- Campo para la contraseña -->
+            <button type="submit">Ingresar</button> <!-- Botón para enviar el formulario -->
+        </form>
+        <button onclick="location.href='registro.html'">Registrar Usuario</button> <!-- Botón que redirige a la página de registro -->
+        <p id="message"></p> <!-- Párrafo para mostrar mensajes de error o éxito -->
+    </div>
+
+    <script>
+        // Agrega un evento al formulario de inicio de sesión para manejar el envío de datos
+        document.getElementById("loginForm").addEventListener("submit", async (e) => {
+            e.preventDefault(); // Previene el comportamiento por defecto del formulario (recarga de página)
+
+            // Obtiene los valores de los campos de usuario y contraseña
+            const username = document.getElementById("loginUsername").value;
+            const password = document.getElementById("loginPassword").value;
+
+            // Envia los datos a la ruta /auth/login en el servidor
+            const res = await fetch("/auth/login", {
+                method: "POST", // Método HTTP para enviar los datos
+                headers: { "Content-Type": "application/json" }, // Indica que los datos están en formato JSON
+                body: JSON.stringify({ nombre_usuario: username, contrasena: password }) // Convierte los datos a JSON
+            });
+
+            // Convierte la respuesta del servidor a formato JSON
+            const data = await res.json();
+
+            // Si la respuesta indica éxito, redirige al usuario a la página principal
+            if (data.success) {
+                window.location.href = "Principal.html"; // Redirige a la página principal
+            } else {
+                // Si ocurre un error, muestra el mensaje correspondiente en el párrafo
+                document.getElementById("message").innerText = data.message || data.error;
+            }
+        });
+    </script>
+</body>
+</html>

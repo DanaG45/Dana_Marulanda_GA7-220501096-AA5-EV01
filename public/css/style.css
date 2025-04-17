@@ -1,0 +1,105 @@
+/* Fuente desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap'); /* Importa la fuente 'Nunito' desde Google Fonts */
+
+/* Establece reglas globales para todos los elementos */
+* {
+    box-sizing: border-box; /* Asegura que el padding y el border no afecten al tamaño total del elemento */
+    margin: 0; /* Elimina los márgenes predeterminados */
+    padding: 0; /* Elimina los rellenos predeterminados */
+    font-family: 'Nunito', sans-serif; /* Aplica la fuente 'Nunito' a todos los elementos */
+}
+
+/* Estilos generales para el body */
+body {
+    background: linear-gradient(135deg, #5ee7df 0%, #b490ca 100%); /* Fondo con un gradiente diagonal */
+    min-height: 100vh; /* Asegura que el body ocupe al menos el 100% de la altura de la ventana */
+    display: flex; /* Usa flexbox para centrar el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    background: #fff; /* Fondo blanco para el contenedor */
+    padding: 2.5rem; /* Relleno interno */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Sombra para dar profundidad */
+    width: 100%; /* Ancho completo */
+    max-width: 400px; /* Ancho máximo de 400px */
+    text-align: center; /* Centra el texto dentro del contenedor */
+    animation: fadeIn 1s ease; /* Añade una animación de entrada */
+}
+
+/* Estilos para el título dentro del contenedor */
+.container h2 {
+    color: #6c5ce7; /* Color del texto en el título */
+    margin-bottom: 20px; /* Margen inferior */
+    font-size: 2rem; /* Tamaño de fuente */
+}
+
+/* Estilos para los campos de entrada */
+input[type="text"],
+input[type="password"] {
+    width: 100%; /* Ancho completo */
+    padding: 12px 15px; /* Relleno interno */
+    margin: 10px 0; /* Márgenes arriba y abajo */
+    border: 2px solid #eee; /* Borde gris claro */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #f9f9f9; /* Fondo gris claro */
+    font-size: 1rem; /* Tamaño de la fuente */
+    transition: border-color 0.3s ease; /* Transición suave para el borde */
+}
+
+/* Estilo cuando un campo de entrada está enfocado */
+input:focus {
+    outline: none; /* Elimina el borde de enfoque predeterminado */
+    border-color: #6c5ce7; /* Cambia el color del borde al morado cuando está enfocado */
+    background-color: #fff; /* Cambia el fondo a blanco cuando está enfocado */
+}
+
+/* Estilos para el botón */
+button {
+    width: 100%; /* Ancho completo */
+    background: #6c5ce7; /* Fondo morado */
+    color: #fff; /* Texto blanco */
+    border: none; /* Elimina el borde predeterminado */
+    padding: 12px; /* Relleno interno */
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de fuente */
+    font-weight: bold; /* Peso de la fuente en negrita */
+    cursor: pointer; /* Cambia el cursor a una mano cuando pasa sobre el botón */
+    margin-top: 15px; /* Márgen superior */
+    transition: background 0.3s ease; /* Transición suave para el fondo */
+}
+
+/* Estilo para el botón cuando se pasa el mouse sobre él */
+button:hover {
+    background: #341f97; /* Cambia el fondo a un tono más oscuro de morado */
+}
+
+/* Estilos para los mensajes de error */
+#message {
+    margin-top: 15px; /* Márgen superior */
+    font-size: 0.95rem; /* Tamaño de fuente más pequeño */
+    color: #e74c3c; /* Color rojo para mensajes de error */
+}
+
+/* Estilos para la imagen (avatar) */
+img {
+    width: 100px; /* Establece un ancho de 100px para la imagen */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    margin-bottom: 1rem; /* Márgen inferior */
+    border-radius: 50%; /* Hace la imagen circular */
+}
+
+/* Animación de entrada para el contenedor */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Comienza desde opaco */
+        transform: translateY(-30px); /* Comienza desde arriba */
+    }
+    to {
+        opacity: 1; /* Termina completamente visible */
+        transform: translateY(0); /* Vuelve a la posición original */
+    }
+}

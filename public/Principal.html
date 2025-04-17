@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Página Principal</title>
+  
+  <!-- Enlace al archivo de estilos CSS -->
+  <link rel="stylesheet" href="CSS/estilo.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Encabezado principal de la página -->
+    <header>
+      <h1>Bienvenido a Servitec</h1>
+
+      <!-- Botón para cerrar sesión -->
+      <button onclick="cerrarSesion()">Cerrar Sesión</button>
+    </header>
+
+    <!-- Contenido principal de la página -->
+    <main>
+      <p>Has iniciado sesión correctamente. Aquí puedes gestionar tus usuarios, ver reportes, etc.</p>
+
+      <!-- Aquí puedes poner más secciones (usuarios, reportes, estadísticas, etc.) -->
+    </main>
+  </div>
+
+  <!-- Script de JavaScript para manejar el cierre de sesión -->
+  <script>
+    function cerrarSesion() {
+      // Puedes limpiar el localStorage o cookies aquí si los usas
+      window.location.href = "index.html"; // Redirige al login
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+body {
+    margin: 0; /* Elimina los márgenes predeterminados del navegador */
+    padding: 0; /* Elimina los rellenos predeterminados del navegador */
+    font-family: 'Segoe UI', sans-serif; /* Establece la fuente predeterminada */
+    background: linear-gradient(135deg, #74ebd5, #9face6); /* Fondo con un gradiente diagonal */
+    display: flex; /* Usa flexbox para centrar el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+}
+
+.container {
+    background-color: white; /* Color de fondo blanco */
+    padding: 2rem; /* Relleno interno de 2 rem */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 0 20px rgba(0,0,0,0.1); /* Sombra sutil para darle profundidad */
+    width: 400px; /* Establece un ancho fijo */
+    text-align: center; /* Centra el texto */
+}
+
+header {
+    display: flex; /* Usa flexbox para organizar los elementos del header */
+    justify-content: space-between; /* Espacio entre los elementos del header */
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+header h1 {
+    font-size: 1.5rem; /* Tamaño de fuente más grande para el título */
+}
+
+header button {
+    background-color: #6c5ce7; /* Fondo morado para el botón */
+    color: white; /* Texto blanco */
+    border: none; /* Elimina el borde predeterminado */
+    padding: 0.5rem 1rem; /* Relleno del botón */
+    border-radius: 10px; /* Bordes redondeados del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.acciones button {
+    margin: 1rem 0.5rem; /* Márgenes alrededor del botón */
+    padding: 0.7rem 1.2rem; /* Relleno del botón */
+    background-color: #a29bfe; /* Fondo azul claro para los botones */
+    border: none; /* Elimina el borde del botón */
+    color: white; /* Texto blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
